@@ -9,6 +9,9 @@ if ! [ $(id -u) = 0 ]; then
    echo "The script need to be run as root." >&2
    exit 1
 fi
+sudo apt-get install unrar
+
+sudo unrar x WindowsRPI.part1.rar
 
 ./poky-glibc-x86_64-rpizerowifi-sdk-arm1176jzfshf-vfp-raspberrypi0-wifi-toolchain* -y
 sudo apt-get install make -y
